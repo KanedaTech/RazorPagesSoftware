@@ -17,6 +17,8 @@ namespace RazorPagesSoftware.Models
         [Display(Name = "PO #")]
         public string PONumber { get; set; }
 
+        public string Location { get; set; }
+
         [Display(Name = "License Qty")]
         public int LicenseQuantity { get; set; }
 
