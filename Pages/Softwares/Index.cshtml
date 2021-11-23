@@ -15,7 +15,10 @@
     <p>
         Software Name: <input type="text" asp-for="SearchString" />
         <select asp-for="SoftwarePublisher" asp-items="Model.Publishers">
-            <option value="">Publisher List: ALL</option>
+            <option value="">Publisher/Developer List: ALL</option>
+        </select>
+        <select asp-for="SoftwareLocations" asp-items="Model.Locations">
+            <option value="">Locations List: ALL</option>
         </select>
         <select asp-for="PurchaseOrder" asp-items="Model.PoNumbers">
             <option value="">PO#'s: ALL</option>
@@ -34,9 +37,6 @@
                 @Html.DisplayNameFor(model => model.Software[0].Publisher)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Software[0].Developer)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Software[0].Vendor)
             </th>
             <th>
@@ -52,9 +52,6 @@
                 @Html.DisplayNameFor(model => model.Software[0].LicenseQuantity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Software[0].IsArchived)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Software[0].RenewalDate)
             </th>
             <th>
@@ -62,6 +59,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Software[0].IsFacStaff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Software[0].IsArchived)
             </th>
             <th></th>
         </tr>
@@ -74,9 +74,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Publisher)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Developer)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Vendor)
@@ -94,9 +91,6 @@
                 @Html.DisplayFor(modelItem => item.LicenseQuantity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsArchived)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.RenewalDate)
             </td>
             <td>
@@ -104,6 +98,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsFacStaff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsArchived)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a><br>

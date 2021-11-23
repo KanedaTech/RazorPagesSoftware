@@ -26,9 +26,6 @@ namespace RazorPagesSoftware.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Developer")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsArchived")
                         .HasColumnType("bit");
 

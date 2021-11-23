@@ -55,7 +55,7 @@ namespace RazorPagesSoftware.Migrations
                     b.Property<string>("PONumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Publisher")
+                    b.Property<string>("Publisher_Developer")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("RenewalDate")

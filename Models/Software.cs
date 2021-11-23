@@ -6,9 +6,12 @@ namespace RazorPagesSoftware.Models
     public class Software
     {
         public int ID { get; set; }
+
         public string Name { get; set; }
+
+        [Display(Name = "Publisher/Developer")]
         public string Publisher { get; set; }
-        public string Developer { get; set; }
+        
         public string Vendor { get; set; }
 
         [Display(Name ="License Key")]
@@ -20,10 +23,7 @@ namespace RazorPagesSoftware.Models
         public string Location { get; set; }
 
         [Display(Name = "License Qty")]
-        public int LicenseQuantity { get; set; }
-
-        [Display(Name = "Archived")]
-        public bool IsArchived { get; set; }
+        public int LicenseQuantity { get; set; }        
 
         [Display(Name = "Renewal Date")]
         [DataType(DataType.Date)]
@@ -34,5 +34,8 @@ namespace RazorPagesSoftware.Models
 
         [Display(Name = "Faculty/Staff Software")]
         public bool IsFacStaff { get; set; }
+
+        [Display(Name = "Archived")]
+        public bool IsArchived { get; set; }
     }
 }

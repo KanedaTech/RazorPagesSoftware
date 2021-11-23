@@ -27,16 +27,15 @@ namespace RazorPagesSoftware.Models
                     {
                         Name = "Visual Studio Community 2019",
                         Publisher = "Microsoft",
-                        Developer = "Microsoft",
                         Vendor = "Microsoft",
                         LicenseKey = "N/A",
                         PONumber = "N/A",
                         Location = "ATC111",
-                        LicenseQuantity = 99999,
-                        IsArchived = false,
+                        LicenseQuantity = 99999,                        
                         RenewalDate = DateTime.Parse("2019-3-13"),
                         IsInstructional = true,
-                        IsFacStaff = true
+                        IsFacStaff = true,
+                        IsArchived = false
                     }
                 );;
                 context.SaveChanges();

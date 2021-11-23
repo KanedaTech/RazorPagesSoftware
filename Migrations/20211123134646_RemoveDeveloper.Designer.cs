@@ -10,8 +10,8 @@ using RazorPagesSoftware.Data;
 namespace RazorPagesSoftware.Migrations
 {
     [DbContext(typeof(RazorPagesSoftwareContext))]
-    [Migration("20211117150353_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20211123134646_RemoveDeveloper")]
+    partial class RemoveDeveloper
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,9 +28,6 @@ namespace RazorPagesSoftware.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Developer")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsArchived")
                         .HasColumnType("bit");
 
@@ -46,13 +43,16 @@ namespace RazorPagesSoftware.Migrations
                     b.Property<int>("LicenseQuantity")
                         .HasColumnType("int");
 
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PONumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Publisher_Developer")
+                    b.Property<string>("Publisher")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("RenewalDate")
