@@ -14,16 +14,15 @@ namespace RazorPagesSoftware.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Developer = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: true),                    
                     Vendor = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LicenseKey = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PONumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LicenseQuantity = table.Column<int>(type: "int", nullable: false),
-                    IsArchived = table.Column<bool>(type: "bit", nullable: false),
+                    LicenseQuantity = table.Column<int>(type: "int", nullable: false),                    
                     RenewalDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsInstructional = table.Column<bool>(type: "bit", nullable: false),
-                    IsFacStaff = table.Column<bool>(type: "bit", nullable: false)
+                    IsFacStaff = table.Column<bool>(type: "bit", nullable: false),
+                    IsArchived = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
